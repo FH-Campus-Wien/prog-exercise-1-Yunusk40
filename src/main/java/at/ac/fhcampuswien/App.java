@@ -51,10 +51,6 @@ public class App {
         //todo Task 4
         public void addTwoNumbers () {
             // input your solution here
-            import java.util.Scanner;
-
-            public class scanner
-
         }
 
         //todo Task 5
