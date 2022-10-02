@@ -1,5 +1,8 @@
 package at.ac.fhcampuswien;
 
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class App {
 
     //todo Task 1
@@ -51,36 +54,144 @@ public class App {
         //todo Task 4
         public void addTwoNumbers () {
             // input your solution here
+            Scanner sc = new Scanner(System.in);
+            int a;
+            int b;
+            int c;
+
+            a = sc.nextInt();
+            b = sc.nextInt();
+
+            c = a + b;
+            System.out.println(c);
         }
 
         //todo Task 5
         public void swapTwoNumbers () {
             // input your solution here
+            System.out.println("Before Swap:");
+            Scanner sc = new Scanner(System.in);
+            System.out.print("x: ");
+            int x = sc.nextInt();
+            System.out.print("y: ");
+            int y = sc.nextInt();
+
+            x = x + y;
+            y = x - y;
+            x = x - y;
+            System.out.println("After Swap:" + System.lineSeparator() +
+                    "x: " + x + System.lineSeparator() +
+                    "y: " + y);
         }
 
         //todo Task 6
         public void compareTwoNumbers () {
             // input your solution here
+            Scanner sc = new Scanner(System.in);
+            System.out.print("n1: ");
+            int a = sc.nextInt();
+            System.out.print("n2: ");
+            int b = sc.nextInt();
+
+            if (a > b) {
+                System.out.println("n1 > n2");
+            }
+            else if (a < b) {
+                System.out.println("n2 > n1");
+            }
+            else if (a == b) {
+                System.out.println("n1 == n2");
+            }
         }
 
         //todo Task 7
         public void ratingSalesPerson () {
             // input your solution here
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Enter annual Revenue: ");
+            int x = sc.nextInt();
+
+                if ( x < 0 || x >= 100000) {
+                    System.out.printf("Invalid Revenue" + System.lineSeparator());
+
+                } else if (x >= 0 && x < 20000) {
+                    System.out.printf("Poor Sales Revenue" + System.lineSeparator());
+
+                } else if (x >= 20000 && x < 50000) {
+                    System.out.printf("Average Sales Revenue" + System.lineSeparator());
+
+                } else if (x >= 50000 && x < 80000) {
+                    System.out.printf("Good Sales Revenue" + System.lineSeparator());
+
+                } else if (x >= 80000 && x < 100000) {
+                    System.out.printf("Excellent Sales Revenue" + System.lineSeparator());
+                }
+
         }
 
         //todo Task 8
         public void getCommissionRate () {
             // input your solution here
+            Scanner sc = new Scanner(System.in);
+            double y;
+
+            System.out.println("Enter CommissionClass: ");
+
+            int x = sc.nextInt();
+
+            switch (x){
+                case 1:
+                    y = 0.01;
+                    break;
+                case 2:
+                    y = 0.02;
+                    break;
+                case 3:
+                    y = 0.03;
+                    break;
+                case 4:
+                    y = 0.04;
+                    break;
+                default:
+                    y = 0.00;
+
+            }
+            System.out.println("Your Commission Rate was set to "+y);
         }
 
         //todo Task 9
         public void leapyear () {
             // input your solution here
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Year: ");
+            int x = sc.nextInt();
+
+            if (x % 4 == 0 && (x % 100 != 0 || x%400 == 0)) {
+                System.out.println("Leapyear");
+            } else {
+                System.out.println("Not a Leapyear");
+            }
         }
 
         //todo Task 10
         public void transposedNumbers () {
             // input your solution here
+            Scanner sc = new Scanner(System.in);
+            int c = 0;
+
+            System.out.print("Number: ");
+            int a = sc.nextInt();
+
+            while(a !=0)
+            {
+                int b = a % 10;
+                c = c * 10 + b;
+                a = a/10;
+            }
+            System.out.println(c);
+
         }
 
 
