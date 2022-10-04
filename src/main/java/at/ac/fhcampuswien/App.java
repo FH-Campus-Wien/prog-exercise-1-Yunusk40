@@ -26,6 +26,7 @@ public class App {
                 "      (--/\\--)    \\__/" + System.lineSeparator() +
                 "      _)(  )(_" + System.lineSeparator() +
                 "     `---''---`");
+
     }
 
         //todo Task 3
