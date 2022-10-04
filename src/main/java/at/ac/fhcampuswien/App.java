@@ -74,8 +74,8 @@ public class App {
             System.out.print("x: ");
             int x = sc.nextInt();
             System.out.print("y: ");
-            int y = sc.nextInt();
 
+            int y = sc.nextInt();
             x = x + y;
             y = x - y;
             x = x - y;
