@@ -1,5 +1,7 @@
 package at.ac.fhcampuswien;
 
+import org.graalvm.compiler.serviceprovider.IsolateUtil;
+
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -29,25 +31,17 @@ public class App {
         //todo Task 3
         public void sumOfLiterals () {
             // input your solution here
-            System.out.println("");
             int sum;
-            char z = 'Z';
+            char z = (int) 'Z';
             int a = 0xface;
             int b = 012;
-            long c = 80L;
-            float d = 44e-1f;
-            double e = 5.5f;
-            double f = 8.88e1;
-            double g = 99.9;
+            long c = (int) 80L;
+            float d = (int) 44e-1f;
+            double e = (int) 5.5f;
+            double f = (int) 8.88e1;
+            double g = (int) 99.9;
 
-            int zz = z;
-            int cc = (int) c;
-            int dd = (int) d;
-            int ee = (int) e;
-            int ff = (int) f;
-            int gg = (int) g;
-
-            sum = zz+a+b+cc+dd+ee+ff+gg;
+            sum = (int) (z+a+b+c+d+e+f+g);
             System.out.println(sum);
         }
 
@@ -136,8 +130,6 @@ public class App {
             Scanner sc = new Scanner(System.in);
             double y;
 
-            System.out.println("Enter CommissionClass: ");
-
             int x = sc.nextInt();
 
             switch (x){
@@ -157,7 +149,7 @@ public class App {
                     y = 0.00;
 
             }
-            System.out.println("Your Commission Rate was set to "+y);
+            System.out.println("Enter CommissionClass: Your Commission Rate was set to " +y);
         }
 
         //todo Task 9
